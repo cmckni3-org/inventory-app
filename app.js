@@ -21,9 +21,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function(req, res){
-  res.render('index', { title: 'Express'});
-});
+var inventory = require('./app/inventory/');
+
+app.route('/')
+  .get(inventory.list)
+  .post(inventory.create);
+app.route('/:id')
+  .get(inventory.show)
+  .post(inventory.update)
+  .delete(inventory.delete);
+app.route('/new').get(inventory.new);
+app.route('/:id/edit').get(inventory.edit);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
