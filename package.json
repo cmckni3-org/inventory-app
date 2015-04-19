@@ -1,7 +1,13 @@
 {
   "name": "inventory-app",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "https://github.com:cmckni3/inventory-app.git"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -14,5 +20,8 @@
     "lodash": "^3.7.0",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0"
+  },
+  "engine": {
+    "node": ">= 0.10"
   }
 }
