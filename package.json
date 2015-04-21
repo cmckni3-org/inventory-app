@@ -2,10 +2,9 @@
   "name": "inventory-app",
   "version": "1.0.0",
   "private": true,
-  "repository" :
-  {
-    "type" : "git",
-    "url" : "https://github.com:cmckni3/inventory-app.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:cmckni3/inventory-app.git"
   },
   "license": "MIT",
   "scripts": {
@@ -18,10 +17,9 @@
     "express": "~4.12.2",
     "express-handlebars": "^2.0.0",
     "lodash": "^3.7.0",
-    "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+    "morgan": "~1.5.1"
   },
-  "engine": {
-    "node": ">= 0.10"
+  "engines": {
+    "node": "0.10.x"
   }
 }
